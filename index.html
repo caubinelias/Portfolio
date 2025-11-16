@@ -11,12 +11,12 @@
 </head>
 <body>
 
-    <header class="hero-section">
+    <header class="hero">
         
         <img 
-            src="img/Gemini_Generated_Image_cp8mq4cp8mq4cp8m (1).png" 
+            src="img/img/Gemini_Generated_Image_cp8mq4cp8mq4cp8m (1).png" 
             alt="Avatar estilo hacker de Elias Caubin" 
-            class="profile-image"
+            class="profile-img"
         >
         <h1>ELIAS CAUBIN JIMENEZ</h1>
         <h2>&gt; Estudiante DAM/DAW | Técnico Informático | Python | Java</h2>
@@ -29,7 +29,7 @@
             <a href="https://github.com/caubinelias" target="_blank" class="neon-link">GITHUB: caubinelias</a>
         </div>
         
-        <div class="call-to-action">
+        <div class="cta">
             <a href="#contact-form-section" class="button-neon">ENVIAR PROPUESTA LABORAL [ACCESS]</a>
         </div>
         
@@ -37,13 +37,13 @@
 
     <main>
         
-        <section id="about" class="symmetrical-section">
+        <section id="about" class="section">
             <h3>&gt; [PERFIL PROFESIONAL]</h3>
             
-            <div class="content-grid">
+            <div class="grid-content">
                 <div class="bio-text">
                     <p>Mi formación combina el **Desarrollo de Aplicaciones (DAM/DAW)** con una base sólida de **Técnico Informático**. Domino HTML, CSS, Python y Java, y destaco por mi capacidad para <span class="highlight">reaccionar correctamente ante la presión</span>.</p>
-                    <p>Poseo diplomas avanzados sobre Linux firmados por s4vitar y estoy estudiando **Python Ofensivo**. Mi meta es clara: <span style="color: var(--color-neon-accent);">acceder al mundo del desarrollo y escalar a la ciberseguridad.</span></p>
+                    <p>Poseo diplomas avanzados sobre Linux firmados por s4vitar y estoy estudiando **Python Ofensivo**. Mi meta es clara: <span class="highlight">acceder al mundo del desarrollo y escalar a la ciberseguridad.</span></p>
                 </div>
                 
                 <div class="skill-list">
@@ -59,7 +59,7 @@
             </div>
         </section>
 
-        <section id="projects" class="symmetrical-section">
+        <section id="projects" class="section">
             <h3>&gt; [PROYECTOS Y LOGROS]</h3>
             
             <table class="tabla-hacker">
@@ -75,14 +75,14 @@
                     <tr>
                         <td>PÁGINA WEB ASOCIACIÓN</td>
                         <td>Desarrollo integral de un sitio web para una asociación de vecinos. Funcionalidad: Comunicación y gestión de información.</td>
-                        <td><span class="span-tech">HTML, CSS, JavaScript.</span></td>
-                        <td><a href="#" class="project-link disabled-link">PENDIENTE - Despliegue</a></td>
+                        <td><span class="skill-tag">HTML, CSS, JavaScript.</span></td>
+                        <td><a href="#" class="disabled-link">PENDIENTE - Despliegue</a></td>
                     </tr>
                     <tr>
                         <td>APP GESTIÓN DE PRODUCTOS</td>
                         <td>Aplicación empresarial para el registro de productos en una <span class="highlight">base de datos</span> y cálculo automatizado de precios.</td>
-                        <td><span class="span-tech">Python, Java, Base de Datos.</span></td>
-                        <td><a href="#" class="project-link disabled-link">SUBIDO EN PRIVADO - Derechos de Autor</a></td>
+                        <td><span class="skill-tag">Python, Java, Base de Datos.</span></td>
+                        <td><a href="#" class="disabled-link">SUBIDO EN PRIVADO - Derechos de Autor</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -91,7 +91,7 @@
 
         </section>
 
-        <section id="education" class="symmetrical-section">
+        <section id="education" class="section">
             <h3>&gt; [FORMACIÓN Y CERTIFICACIONES]</h3>
             
             <table class="tabla-hacker">
@@ -122,7 +122,7 @@
             </table>
         </section>
 
-        <section id="experience" class="symmetrical-section">
+        <section id="experience" class="section">
             <h3>&gt; [EXPERIENCIA LABORAL]</h3>
 
             <ol class="experience-list">
@@ -139,23 +139,29 @@
             </ol>
         </section>
 
-        <section id="contact-form-section" class="symmetrical-section">
+        <section id="contact-form-section" class="section">
             <h3>&gt; [RECIBIR PROPUESTAS LABORALES]</h3>
             <p>Si está interesado en mi perfil, utilice el siguiente formulario. Responderé lo antes posible.</p>
 
-            <form class="proposal-form" action="enviado.html" method="GET">
+            <form class="form-proposal" action="https://formsubmit.co/caubinelias@gmail.com" method="POST">
                 
-                <label for="empresa">Nombre de la Empresa:</label>
-                <input type="text" id="empresa" name="empresa" required>
+                <input type="hidden" name="_next" value="https://caubinelias.github.io/Portfolio/enviado.html">
+                <input type="hidden" name="_captcha" value="false">
 
+                <label for="empresa">Nombre de la Empresa:</label>
+                <input type="text" id="empresa" name="Empresa" required>
+
+                <label for="contacto_email">Email de Contacto:</label>
+                <input type="email" id="contacto_email" name="Email" required>
+                
                 <label for="puesto">Puesto Ofrecido:</label>
-                <input type="text" id="puesto" name="puesto" required>
+                <input type="text" id="puesto" name="Puesto" required>
                 
                 <label for="salario">Salario Anual Propuesto (EUR/USD - Opcional):</label>
-                <input type="number" id="salario" name="salario" min="0">
+                <input type="number" id="salario" name="Salario" min="0">
 
                 <label for="contrato">Tipo de Contrato:</label>
-                <select id="contrato" name="contrato" required>
+                <select id="contrato" name="Contrato" required>
                     <option value="" disabled selected>Seleccione una opción</option>
                     <option value="indefinido">Indefinido</option>
                     <option value="temporal">Temporal</option>
@@ -163,8 +169,10 @@
                     <option value="practicas">Prácticas</option>
                 </select>
 
-                <label for="mensaje">Descripción de la Oferta / Requisitos:</label>
-                <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                <label for="mensaje">Descripción de la Oferta / Requisitos/ Solicitud de CV:</label>
+                <textarea id="mensaje" name="Mensaje" rows="6" required></textarea>
+
+                <input type="hidden" name="_subject" value="Nueva Propuesta Laboral de Portafolio"> 
 
                 <button type="submit">Enviar Propuesta [EXECUTE]</button>
 
